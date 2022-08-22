@@ -1,7 +1,6 @@
 package guru.springframework.spring5recipeapp.Converters;
 
 import guru.springframework.spring5recipeapp.commands.IngredientCommand;
-import guru.springframework.spring5recipeapp.commands.UnitOfMeasuresCommand;
 import guru.springframework.spring5recipeapp.domain.Ingredient;
 import guru.springframework.spring5recipeapp.domain.Recipe;
 import guru.springframework.spring5recipeapp.domain.UnitOfMeasures;
@@ -43,7 +42,7 @@ class IngredientToIngredientCommandTest {
         //given
         Ingredient command=new Ingredient();
         command.setId(ID_VALUE);
-        command.setAmounts(AMMOUNT);
+        command.setAmount(AMMOUNT);
         command.setDescription(DESCRIPTION);
         UnitOfMeasures unitOfMeasures = new UnitOfMeasures();
         unitOfMeasures.setId(UOM_ID);
@@ -57,7 +56,7 @@ class IngredientToIngredientCommandTest {
         assertNotNull(ingredientCommand.getId());
         assertEquals(ID_VALUE, ingredientCommand.getId());
         assertEquals(DESCRIPTION, ingredientCommand.getDescription());
-        assertEquals(AMMOUNT, ingredientCommand.getAmounts());
+        assertEquals(AMMOUNT, ingredientCommand.getAmount());
         assertEquals(UOM_ID, ingredientCommand.getUom().getId());
 
     }
@@ -67,7 +66,7 @@ class IngredientToIngredientCommandTest {
         //given
         Ingredient command=new Ingredient();
         command.setId(ID_VALUE);
-        command.setAmounts(AMMOUNT);
+        command.setAmount(AMMOUNT);
         command.setDescription(DESCRIPTION);
 
 
@@ -79,7 +78,7 @@ class IngredientToIngredientCommandTest {
         assertNull(ingredientCommand.getUom());
         assertEquals(ID_VALUE, ingredientCommand.getId());
         assertEquals(DESCRIPTION, ingredientCommand.getDescription());
-        assertEquals(AMMOUNT, ingredientCommand.getAmounts());
+        assertEquals(AMMOUNT, ingredientCommand.getAmount());
 
     }
 }

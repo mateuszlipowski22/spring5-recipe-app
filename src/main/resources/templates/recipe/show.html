@@ -105,7 +105,7 @@
                                     <tr>
                                         <!--/*@thymesVar id="recipe" type="guru.springframework.spring5recipeapp.domain.Recipe"*/-->
                                         <li th:each="ingredient: ${recipe.ingredients}"
-                                            th:text="${(ingredient.getAmounts() +' '+ ingredient.uom.getDescription() + ' - ' + ingredient.getDescription())}">cat one</li>
+                                            th:text="${(ingredient.getAmount() +' '+ ingredient.uom.getDescription() + ' - ' + ingredient.getDescription())}">cat one</li>
                                     </tr>
                                 </ul>
                             </div>
